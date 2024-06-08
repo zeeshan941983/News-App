@@ -1,3 +1,4 @@
+import 'package:news_app/model/Tech_Model.dart';
 import 'package:news_app/model/catergories_model.dart';
 import 'package:news_app/model/headlines_model.dart';
 import 'package:news_app/repository/news_repository.dart';
@@ -11,6 +12,11 @@ class NewsVeiwModel {
 
   Future<CategoriesNewsModel> fetchCategoriesApi(String category) async {
     final response = _repo.fetchCategoriesApi(category);
+    return response;
+  }
+
+  Future<TechModel> fetchTechApi() async {
+    final response = _repo.fetchTechApi();
     return response;
   }
 }
